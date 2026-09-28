@@ -1,0 +1,15 @@
+{
+  "budget": 2,
+  "busy_code": "E_BUSY",
+  "no_reader_code": "E_NO_READER",
+  "no_writer_code": "E_NO_WRITER",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "readers": 0, "writer": 0, "records": [], "ledger": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "read_in" },
+    { "id": 2, "kind": "read_in" },
+    { "id": 3, "kind": "read_out" },
+    { "id": 4, "kind": "read_out" },
+    { "id": 5, "kind": "write_in" }
+  ]
+}
