@@ -1,8 +1,10 @@
-// gate.js：进出后的闸门状态（基线：一律原样返回）
+// gate.js：进出后的闸门状态（不合法时保持原样，不改动入参）
 export function readIn(state) {
-  return state;
+  if (state.writer > 0) return state;
+  return Object.assign({}, state, { readers: state.readers + 1 });
 }
 
 export function writeIn(state) {
-  return state;
+  if (state.readers > 0 || state.writer > 0) return state;
+  return Object.assign({}, state, { writer: 1 });
 }
