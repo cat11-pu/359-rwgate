@@ -39,7 +39,7 @@ export function mount(spec, parts) {
       const line = document.createElement("div");
       line.className = "row";
       const text = document.createElement("span");
-      text.textContent = "事件 " + row[1] + " 压在账上";
+      text.textContent = "事件 " + row[0] + " 压在账上";
       line.appendChild(text);
       const chip2 = document.createElement("span");
       chip2.className = "chip warn";
